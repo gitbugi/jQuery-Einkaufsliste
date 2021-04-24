@@ -1,4 +1,5 @@
 
+
 $("#button-addon2").click(function(){
     var inputTxt = $(".form-control").val();
 
@@ -15,17 +16,16 @@ $("#button-addon2").click(function(){
         $(".container").append(x);
         $(".form-control").val("");
     }
-
 })
 
 $(".form-control").keydown(function(e){
     var key = e.which;
     if (key == 13){
         $("#button-addon2").trigger('click');
-        $(".list-group-item").css("text-decoration", "line-through");
     }
-
 })
 
-
+$(document).on("click", ".list-group-item", function(e){
+        $(e.currentTarget).css("text-decoration", "line-through");
+})
 
