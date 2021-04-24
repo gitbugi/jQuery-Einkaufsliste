@@ -3,17 +3,17 @@
 $("#button-addon2").click(function(){
     var inputTxt = $(".form-control").val();
 
-    var x = '<label class="list-group-item">' +
-                '<input class="form-check-input me-1" type="checkbox" value="">' +
-                inputTxt +
-                '</label>';
+    var newItem =   '<label class="list-group-item">' +
+                     '<input class="form-check-input me-1" type="checkbox" value="">' +
+                    '<div>' + inputTxt + '</div>' +
+                    '</label>';
 
 
     if ($(".form-control").val() == "") {
         alert("Sie müssen etwas rein schreiben");
     }
     else {
-        $(".container").append(x);
+        $(".container").append(newItem);
         $(".form-control").val("");
     }
 })
@@ -25,7 +25,7 @@ $(".form-control").keydown(function(e){
     }
 })
 
-$(document).on("click", ".list-group-item", function(e){
-        $(e.currentTarget).css("text-decoration", "line-through");
+$(document).on("change", ".list-group-item", function(e){
+    $(e.currentTarget).toggleClass("txt");
 })
 
