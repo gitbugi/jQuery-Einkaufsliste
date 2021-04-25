@@ -14,6 +14,10 @@
   </head>
 
   <style>
+    h1 {
+      text-align: center;
+    }
+
     .txt {
       text-decoration: line-through;
     }
@@ -25,6 +29,12 @@
       color: red;
       z-index: 100;
     }
+
+    .btn-danger {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%)
+    }
   </style>
   <body>
 
@@ -35,8 +45,10 @@
             <input type="text" class="form-control" placeholder="Item" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enter</button>
         </div>
+
     </div>
 
+    <button type="button" class="btn btn-danger">Remove All</button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

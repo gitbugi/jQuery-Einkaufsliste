@@ -4,7 +4,7 @@ $("#button-addon2").click(function(){
     var inputTxt = $(".form-control").val();
 
     var newItem =   '<label class="list-group-item">' +
-                     '<input class="form-check-input me-1" type="checkbox" value="">' +
+                    '<input class="form-check-input me-1" type="checkbox" value="">' +
                     '<div>' + inputTxt + '<i class="fas fa-trash-alt"></i> </div> ' +
                     '</label>';
 
@@ -32,4 +32,8 @@ $(document).on("change", ".list-group-item", function(e){
 
 $(document).on("click", ".fa-trash-alt", function(e){
     $(e.currentTarget.parentElement.parentElement).remove();
+})
+
+$(document).on("click", ".btn-danger", function(e){
+    $(".list-group-item").remove();
 })
